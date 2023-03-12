@@ -3,7 +3,7 @@
 source:
   type: "file"
   config:
-    path: "./examples/mce_files/single_mce.json"
+    filename: "https://raw.githubusercontent.com/datahub-project/datahub/master/metadata-ingestion/examples/mce_files/bootstrap_mce.json"
 
 # see https://datahubproject.io/docs/metadata-ingestion/sink_docs/console for complete documentation
 sink:
