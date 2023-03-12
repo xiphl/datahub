@@ -3,7 +3,7 @@ import pathlib
 import re
 import sys
 import unittest.mock
-from urllib import parse
+from urllib import parse, request
 import requests
 from typing import Any, Dict, Set, Union
 
@@ -88,7 +88,7 @@ def load_config_file(
             raise ConfigurationError(
                 f"Only .toml and .yml are supported. Cannot process file type {config_file_path.suffix}"
             )
-        # now we parse the string to see if its a local or remote file
+        print(f"config file is {config_file}")
         url_parsed = parse.urlparse(config_file)
         if url_parsed.scheme in ('file', ''): # Possibly a local file
             if not config_file_path.is_file():
